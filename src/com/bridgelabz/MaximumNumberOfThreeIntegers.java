@@ -5,8 +5,20 @@ public class MaximumNumberOfThreeIntegers<P extends Comparable<P>> {
         P maximum = number1;
         if (number2.compareTo(maximum) > 0){
             maximum = number2;
-        }else if (number3.compareTo(maximum) > 0){
-            maximum = number2;
+            if (number3.compareTo(maximum) > 0) {
+                maximum = number3;
+            }
+            else if (number3.compareTo(maximum) < 0) {
+                maximum = number2;
+            }
+        }else if (number2.compareTo(maximum) < 0){
+            maximum = number1;
+            if (number3.compareTo(maximum) > 0) {
+                maximum = number3;
+            }
+            else if (number3.compareTo(maximum) < 0) {
+                maximum = number1;
+            }
         }
         return maximum;
     }
@@ -21,5 +33,8 @@ public class MaximumNumberOfThreeIntegers<P extends Comparable<P>> {
         System.out.println("the maximum number is " + maximum2.maximumNumber(101F, 69F, 51F));
         System.out.println("the maximum number is " + maximum2.maximumNumber(101F, 169F, 51F));
         System.out.println("the maximum number is " + maximum2.maximumNumber(101F, 169F, 511F));
+        System.out.println();
+        MaximumNumberOfThreeIntegers<String> maximum3 = new MaximumNumberOfThreeIntegers<>();
+        System.out.println("the maximum string is " + maximum3.maximumNumber("Apple", "Peach", "Banana"));
     }
 }

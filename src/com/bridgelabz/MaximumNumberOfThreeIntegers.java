@@ -16,7 +16,10 @@ public class MaximumNumberOfThreeIntegers<P extends Comparable<P>> {
         System.out.println("the maximum number is " + maximum1.maximumNumber(100, 14, 54));
         System.out.println("the maximum number is " + maximum1.maximumNumber(100, 114, 54));
         System.out.println("the maximum number is " + maximum1.maximumNumber(100, 114, 154));
+        System.out.println();
         MaximumNumberOfThreeIntegers<Float> maximum2 = new MaximumNumberOfThreeIntegers<>();
         System.out.println("the maximum number is " + maximum2.maximumNumber(101F, 69F, 51F));
+        System.out.println("the maximum number is " + maximum2.maximumNumber(101F, 169F, 51F));
+        System.out.println("the maximum number is " + maximum2.maximumNumber(101F, 169F, 511F));
     }
 }
